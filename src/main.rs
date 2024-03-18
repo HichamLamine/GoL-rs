@@ -77,12 +77,12 @@ impl GameState {
     fn handle_keyboard(&mut self, ctx: &mut Context) {
         if ctx
             .keyboard
-            .is_key_pressed(ggez::input::keyboard::KeyCode::Space)
+            .is_key_just_pressed(ggez::input::keyboard::KeyCode::Space)
         {
             self.pause_play();
         } else if ctx
             .keyboard
-            .is_key_pressed(ggez::input::keyboard::KeyCode::C)
+            .is_key_just_pressed(ggez::input::keyboard::KeyCode::C)
         {
             self.clear_grid();
             self.random_fill(2000);
@@ -95,6 +95,7 @@ impl GameState {
         }
     }
     fn clear_grid(&mut self) {
+        self.generation = 0;
         self.grid = vec![vec![false; GRID_HEIGHT as usize]; GRID_WIDTH as usize];
     }
     fn random_fill(&mut self, num_to_fill: u32) {
