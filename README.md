@@ -1,5 +1,6 @@
 # 🎮 GoL-rs
 A Game of Life implementation in rust.
+
 ![Game showcase](resources/game-showcase.gif) 
 
 ## Features
@@ -18,4 +19,5 @@ Coming soon to Cargo crates.
 - [ ] Build a gui interface for the game using [egui](https://github.com/emilk/egui).
 
 ## Credits
-- [ggez](https://github.com/ggez/ggez), a rust library to create games easily.
+- [ggez](https://github.com/ggez/ggez) a rust library to create games easily.
+- [rand](https://crates.io/crates/rand) crate for generating random numbers.
